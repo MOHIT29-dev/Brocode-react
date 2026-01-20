@@ -28,3 +28,9 @@
 }
 
 
+.student{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  padding: 1px solid hsl(0, 0%, 50%, 0.8);
+}
+
