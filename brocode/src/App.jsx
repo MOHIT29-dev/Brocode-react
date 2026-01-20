@@ -11,7 +11,7 @@ function App() {
         <Card/>
         <Button/>
         <Button/>
-        <Student name="Mohit" age={20}/>
+        <Student name="Mohit" age={20} isStudent= {true}/>
         <Student name="Rohit" age={22}/>
         <Student name="Mike" age={25}/>
     </>
