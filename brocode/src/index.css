@@ -28,9 +28,12 @@
 }
 
 
-.student{
+.Student {
   font-family: 'Courier New', Courier, monospace;
   font-size: 2em;
-  padding: 1px solid hsl(0, 0%, 50%, 0.8);
+  padding: 10px; /* fixed */
+  border: 1px solid hsl(0, 0%, 50%, 0.8);
+  margin: 10px;
+  text-align: center;
 }
 
