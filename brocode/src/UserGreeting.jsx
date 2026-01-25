@@ -43,10 +43,19 @@ export default UserGreeting;
 // git merge <branch name>
 // git remote -v
 
-// git stash
-// git stash apply
+// git stash : saves your changes without committing them.
+// git stash apply: reapplies the changes you saved with git stash.
+// git stash pop: reapplies the changes and removes them from the stash list.
+// git stash list: shows the list of stashed changes.
+// git stash drop: deletes a specific stash entry.
+// git diff: shows the differences between your working directory and the index or a commit.
+// git reset <filename>: unstage a file.
+// git reset --hard: discard all local changes in your working directory.
+// git reset --hard <commit id> : discard all local changes and reset to a specific commit.
 // git reset --hard HEAD~1
 // git revert <commit id>
+
+
 // git fetch
 // git merge origin/main
 // git pull
@@ -58,16 +67,20 @@ export default UserGreeting;
 // git push origin --tags
 // git rm <filename>
 // git clean -f
+
+
 // git config --global user.name "name"
 // git config --global user.email "email"
 // git config --global core.editor "code --wait"
-// git log --oneline
-// git log --graph --oneline --all
-// git reflog
-// git gc
-// git bisect start
-// git bisect good <commit id>
-
+// git log --oneline: shows a condensed version of the commit history.
+// git log --graph --oneline --all : shows a graphical representation of the commit history.
+// git show <commit id>
+// git reset --soft <commit id>
+// git reset --mixed <commit id>
+// git reflog : shows a log of all your reference updates.
+// git gc : cleans up unnecessary files and optimizes the local repository.
+// git bisect start : starts the bisecting process.
+// git bisect good <commit id> : marks a commit as good.
 
 
 // git bisect bad <commit id>
