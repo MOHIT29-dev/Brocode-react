@@ -37,3 +37,20 @@
   text-align: center;
 }
 
+.welcome-msg{
+  font-size: 2.5em;
+  background-color: hsl(120,100%,42%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin:0;
+}
+
+.login-msg{
+  font-size: 2.5em;
+  background-color: hsl(0,100%,42%);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin:0;
+}
