@@ -1,0 +1,67 @@
+[33mcommit 1f2a96691d35eecd3daca5695941215408cfcf99[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Sun Jan 25 12:30:53 2026 +0530
+
+    COMMENTS AS GIT COMMANDS
+
+[33mcommit 449af51f4ad30e26caa5fc474ce953f343825438[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Sun Jan 25 12:27:55 2026 +0530
+
+    Add UserGreeting component
+
+[33mcommit a00a00c6d2895a4b1c42cacbb46ef6fadd826650[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Thu Jan 22 18:26:23 2026 +0530
+
+    Add prop-types and react-is packages with necessary files and configurations
+    
+    - Introduced prop-types package (version 15.8.1) for type checking in React components.
+    - Added react-is package (version 16.13.1) for validating React element types.
+    - Included necessary files such as LICENSE, README.md, and build-info.json for react-is.
+    - Created production and development builds for react-is in CommonJS and UMD formats.
+    - Updated package.json and package-lock.json to reflect new dependencies.
+
+[33mcommit c0237301a0d302213ad81a1b2843fe8e0f86000e[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 22:22:24 2026 +0530
+
+    // Commit message template
+
+[33mcommit f56a32296b816fbb6eda289ab795118f11d4c938[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 22:10:12 2026 +0530
+
+    updte commit message for your changes. Lines starting with '#' will be ignored, and an empty message aborts the commit.
+
+[33mcommit 4e4aa01400b8f1051c2f4e619e2bb72edfc756b6[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 21:53:14 2026 +0530
+
+    Update React code
+
+[33mcommit a2be1e15d9698f6c39474c08168a5eb06ace642c[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 21:50:32 2026 +0530
+
+    Update React code
+
+[33mcommit 0f979acb79bffaf3e5ceb363eefdf392ccd8a4d8[m
+Merge: ad340b5 7114ab6
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 21:13:38 2026 +0530
+
+    Merge branch 'main' of https://github.com/MOHIT29-dev/brocode-react
+    git pull origin main --allow-unrelated-histories
+
+[33mcommit 7114ab674a5efb00fb83fbc44d61a02bfab2769c[m
+Author: Mohit Kumar <119504966+MOHIT29-dev@users.noreply.github.com>
+Date:   Tue Jan 20 21:06:59 2026 +0530
+
+    Initial commit
+
+[33mcommit ad340b54879b399d6af417f5ee504ae1bfa5af2f[m
+Author: Mohit Kumar <mohitkumar291202@gmail.com>
+Date:   Tue Jan 20 21:02:22 2026 +0530
+
+    Initial React project setup
