@@ -1,24 +1,53 @@
-function List(){
-    const fruits  =[{id: 1,name:"Apple",calories:52},
-                    {id: 2,name:"Banana",calories:89},  
-                    {id: 3,name:"Orange",calories:47}, 
-                    {id: 4,name:"Mango",calories:100}];
+import PropTypes from "prop-types";
+
+function List(props){
+
+
+    const category = props.category;
+    const items = props.items;
+
+
+    const listItems = items.map(item => 
+        <li key={item.id}>  {item.name}: &nbsp;
+        <b>{item.calories}</b></li>);
+
+
 
     //fruits.sort((a,b) => a.name.localeCompare(b.name)); //ALPHABETICAL ORDER
     //fruits.sort((a,b) => b.calories - a.calories); //CALORIE ORDER NUMERIC ORDER
 
     //const lowCalFruits = fruits.filter(fruits => fruits.calories < 60);
 
-    const highCalFruits = fruits.filter(fruits => fruits.calories >=60);
+    //const highCalFruits = fruits.filter(fruits => fruits.calories >=60);
 
 
 
-    const ListItems = highCalFruits.map(highCalFruits => 
-    <li key = {highCalFruits.id}>  {highCalFruits.name}: &nbsp;
-    <b>{highCalFruits.calories}</b></li>);
+   /* const ListItems = fruits.map(fruit => 
+    <li key = {fruit.id}>  {fruit.name}: &nbsp;
+    <b>{fruit.calories}</b></li>);*/
 
 
-    return(<ol>{ListItems}</ol>);
+    return(<>
+           <h3>{category}</h3>
+           <ol>{listItems}</ol>
+           </>);
+}
+List.propTypes = {
+    category: PropTypes.string.isRequired,
+
+    //say that items is an array of objects with specific shape
+    // each object has id, name, calories
+    // and their respective data types
+    // isRequired means that this prop must be provided
+    // when the component is used.
+    // if not provided, a warning will be shown in the console
+    // during development.
+    items: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,  
+        calories: PropTypes.number.isRequired
+    })).isRequired  
+
 }
 export default List;
 
