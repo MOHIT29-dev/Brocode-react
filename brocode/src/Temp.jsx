@@ -1,3 +1,11 @@
+// updater function = a function passed as an argument to setState()
+// ex. setYear(arrow function)
+// Allows for safe updates based on the previous state
+// Used with multiple state updates and asynchronous functions
+// Good practice to use updater functions
+
+
+
 import React, { useState } from 'react';
 
 function MyComponent() {
@@ -5,8 +13,13 @@ function MyComponent() {
     const [count, setCount] = useState(0);
 
     function increment(){
+
+        // Takes the PENDING state to calculate the NEXT state
+        // React puts your updater function in a queue (waiting in line)
+        // During the next render, it will call them in the same order
+
         setCount(c => c + 1);
-        setCount(c => c + 1);
+        setCount(c => c + 1);   
         setCount(c => c + 1);
     };
  
@@ -30,3 +43,6 @@ function MyComponent() {
       );
 }
 export default MyComponent
+
+
+
