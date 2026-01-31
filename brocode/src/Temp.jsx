@@ -2,32 +2,41 @@ import React, {useState} from 'react';
 
 
 function MyComponent(){
+    const [name, setName] = useState("guest");
+    const [age,setAge] = useState("");
+    const [payment, setPayment] = useState("");
 
-    const [name, setName] = useState("Rohit");
-    const [age, setAge] = useState(0);
-    const [isEmployed, setIsEmployed] = useState(false);
-    
-    const updateName = () => {
-        setName("mohit");
+
+    function handleNameChange(event){
+        setName(event.target.value);
+        
     }
 
-    const incrementAge = () => {
-        setAge(age + 1);
+    function handleChangeAge(event){
+        setAge(event.target.value);
+        
     }
 
-    const toggleEmployedStatus = () => {
-        setIsEmployed(!isEmployed);
+    function handleChangePayment(event){
+        setPayment(event.target.value);
     }
 
     return( <div>
                 <p>Name: {name}</p>
-                <button onClick={updateName}>Set Name</button>
+                <input type="text" value={name} onChange={handleNameChange}/>
+                
 
-                <p>Age: {age}</p>
-                <button onClick={incrementAge}>Increment Age</button>
+                <p>Age : {age}</p> 
+                <input type="number" value={age} onChange={handleChangeAge}/>   
+                
 
-                <p>Is Employed : {isEmployed ? "yes" : "no"}</p>
-                <button onClick = {toggleEmployedStatus}>Toggle Status</button>
+                <p>Payment mode:{payment}</p>
+                <select value={payment} onChange= {handleChangePayment}>
+                    <option value="Credit Card">CREDIT CARD</option>
+                    <option value="Debit Card">DEBIT CARD</option>
+                    <option value="PayPal">PAYPAL</option>
+                </select>    
+                
             </div>);
 }
 export default MyComponent
