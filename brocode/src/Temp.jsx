@@ -15,38 +15,42 @@
 // #5 Clean up when a component unmounts
 
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from "react";
 
 function MyComponent() {
 
-    const [car, setCar] = useState({
-        year:2012,
-        model:"ford",
-        color : "red",
-    });
+    const [width, setWidth] = useState(() => window.innerWidth);
+    const [height, setHeight] = useState(() => window.innerHeight);
 
-    function handleYearChange(e){
-         setCar(c=>({...c,year:e.target.value}));
-    };
- 
-    function handleModelChange(e){
-        setCar(c=>({...c,model:e.target.value}));
-    };
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        };
 
-    function handleColorChange(e){
-        setCar(c=>({...c,color:e.target.value}));
-    }
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+
+    useEffect(() => {
+        document.title = `Size: ${width} x ${height}`;
+    }, [width, height]);
 
     return (
-        <div>
-            <p>year: {car.year} model: {car.model} color: {car.color}</p>
-            <input type ="number" onChange={handleYearChange}/>
-            <input type ="text" onChange={handleModelChange}/>
-            <input type ="text" onChange={handleColorChange}/>
-        </div>
-      );
+        <>
+            <p>Window Width: {width}px</p>
+            <p>Window Height: {height}px</p>
+        </>
+    );
 }
-export default MyComponent
+
+export default MyComponent;
+
+
+
 
 
 
