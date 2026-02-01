@@ -1,9 +1,18 @@
-// updater function = a function passed as an argument to setState()
-// ex. setYear(arrow function)
-// Allows for safe updates based on the previous state
-// Used with multiple state updates and asynchronous functions
-// Good practice to use updater functions
+// useEffect()
+// React Hook that tells React to DO THIS CODE WHEN:
+// (pick one) 
+// This component re-renders
+// This component mounts
+// The state of a value changes
 
+// useEffect(function, [dependencies])
+
+// USES
+// #1 Event Listeners
+// #2 DOM manipulation
+// #3 Subscriptions (real-time updates)
+// #4 Fetching Data from an API
+// #5 Clean up when a component unmounts
 
 
 import React, { useState } from 'react';
@@ -45,3 +54,9 @@ export default MyComponent
 // git add .
 // git commit -m "message"
 // git push origin main
+
+//git to create new branch and push and commit
+// git checkout -b branch_name
+// git add .
+// git commit -m "message"
+// git push origin branch_name
