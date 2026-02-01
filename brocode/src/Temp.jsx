@@ -10,35 +10,30 @@ import React, { useState } from 'react';
 
 function MyComponent() {
 
-    const [count, setCount] = useState(0);
+    const [car, setCar] = useState({
+        year:2012,
+        model:"ford",
+        color : "red",
+    });
 
-    function increment(){
-
-        // Takes the PENDING state to calculate the NEXT state
-        // React puts your updater function in a queue (waiting in line)
-        // During the next render, it will call them in the same order
-
-        setCount(c => c + 1);
-        setCount(c => c + 1);   
-        setCount(c => c + 1);
+    function handleYearChange(e){
+         setCar(c=>({...c,year:e.target.value}));
     };
  
-    function decrement(){
-        setCount(c => c - 1);
-        setCount(c => c - 1);
-        setCount(c => c - 1);
+    function handleModelChange(e){
+        setCar(c=>({...c,model:e.target.value}));
     };
 
-    function reset(){
-        setCount(0);
+    function handleColorChange(e){
+        setCar(c=>({...c,color:e.target.value}));
     }
 
     return (
         <div>
-            <p>Count: {count}</p>
-            <button onClick={decrement}>Decrement</button>
-            <button onClick={reset}>Reset</button>
-            <button onClick={increment}>Increment</button>
+            <p>year: {car.year} model: {car.model} color: {car.color}</p>
+            <input type ="number" onChange={handleYearChange}/>
+            <input type ="text" onChange={handleModelChange}/>
+            <input type ="text" onChange={handleColorChange}/>
         </div>
       );
 }
