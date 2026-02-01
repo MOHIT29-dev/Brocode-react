@@ -41,3 +41,7 @@ export default MyComponent
 
 
 
+//git command to commit
+// git add .
+// git commit -m "message"
+// git push origin main
