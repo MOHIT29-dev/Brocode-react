@@ -1,50 +1,62 @@
-// useEffect()
-// React Hook that tells React to DO THIS CODE WHEN:
-// (pick one) 
-// This component re-renders
-// This component mounts
-// The state of a value changes
+// useState() = Re-renders the component when the state value changes
 
-// useEffect(function, [dependencies])
+// useRef()   = "use Reference" Does not cause re-renders when its value changes.
+//                     1. Accessing/Interacting with DOM elements
+//                     2. Handling Focus, Animations, and Transitions
+//                     3. Managing Timers and Intervals
 
-// USES
-// #1 Event Listeners
-// #2 DOM manipulation
-// #3 Subscriptions (real-time updates)
-// #4 Fetching Data from an API
-// #5 Clean up when a component unmounts
+import React, {useEffect, useRef} from 'react';
 
+function MyComponent(){
 
-import React, { useState, useEffect, useRef } from "react";
-
-function MyComponent() {
-    const inputRef = useRef(null);
-    
-    
-    useEffect(()=> {
-        console.log("The component has rendered or re-rendered.");
-        console.log('inputRef current value:', inputRef.current);   
-    })
-
-    function handleClick(){
-        inputRef.current.focus();
-        inputRef.current.style.backgroundColor = 'yellow';
-    }
+    const inputRef1 = useRef(null);
+    const inputRef2 = useRef(null);
+    const inputRef3 = useRef(null);
 
     useEffect(() => {
+        console.log("COMPONENT RENDERED");
+    });
 
-    }, []);
+    function handleClick1(){
+        inputRef1.current.focus();
+        inputRef1.current.style.backgroundColor = "yellow";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
+    }
 
-    return(<div>
-        <button onClick={handleClick}>
-            Click me.
-        </button>
-        <input ref={inputRef}/>
-    </div>
-        
+    function handleClick2(){
+        inputRef2.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "yellow";
+        inputRef3.current.style.backgroundColor = "";
+    }
+
+    function handleClick3(){
+        inputRef3.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "yellow";
+    }
+
+    return (
+        <div>
+            <button onClick={handleClick1}>
+                Click me 1!
+            </button>
+            <input ref={inputRef1}/>
+
+            <button onClick={handleClick2}>
+                Click me 2!
+            </button>
+            <input ref={inputRef2}/>
+
+            <button onClick={handleClick3}>
+                Click me 3!
+            </button>
+            <input ref={inputRef3}/>
+        </div>
     );
 }
-
 export default MyComponent;
 
 
