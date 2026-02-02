@@ -5,7 +5,7 @@
 After One Month of learning ReactJs 
 ## TOPICS COVERED
 
-## Learning Branches (Forevery topic Branches are Created)
+## Learning Branches (For every topic Branches are Created)
 
 - react-useRef-code → useRef examples
 - react-useEffect-code → useEffect lifecycle & cleanup
