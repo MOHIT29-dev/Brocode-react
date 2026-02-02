@@ -15,19 +15,33 @@
 // #5 Clean up when a component unmounts
 
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 function MyComponent() {
-
+    const inputRef = useRef(null);
     
+    
+    useEffect(()=> {
+        console.log("The component has rendered or re-rendered.");
+        console.log('inputRef current value:', inputRef.current);   
+    })
+
+    function handleClick(){
+        inputRef.current.focus();
+        inputRef.current.style.backgroundColor = 'yellow';
+    }
 
     useEffect(() => {
-       
 
-    return (
-        <>
-           
-        </>
+    }, []);
+
+    return(<div>
+        <button onClick={handleClick}>
+            Click me.
+        </button>
+        <input ref={inputRef}/>
+    </div>
+        
     );
 }
 
