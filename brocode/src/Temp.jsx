@@ -31,12 +31,6 @@ function MyComponent(){
         inputRef3.current.style.backgroundColor = "";
     }
 
-    function handleClick3(){
-        inputRef3.current.focus();
-        inputRef1.current.style.backgroundColor = "";
-        inputRef2.current.style.backgroundColor = "";
-        inputRef3.current.style.backgroundColor = "yellow";
-    }
 
     return (
         <div>
