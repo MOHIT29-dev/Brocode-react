@@ -32,7 +32,7 @@ function MyComponent(){
     }
 
     function handleClick3(){
-        inputRef3.current.focus();
+        inputRef3.current.focus(); //focus allows user to target or focus on single element of a component at as any event handler changed
         inputRef1.current.style.backgroundColor = "";
         inputRef2.current.style.backgroundColor = "";
         inputRef3.current.style.backgroundColor = "yellow";
